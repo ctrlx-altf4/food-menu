@@ -23,7 +23,6 @@ const Tabs = ({ children }) => {
       data.current = window.scrollY;
       // Set Previous to the scroll previous position
       data.previous += (data.current - data.previous) * data.ease;
-      // Set rounded to
       data.rounded = Math.round(data.previous * 100) / 100;
 
       //smooth scrolling to the scroll container
@@ -37,6 +36,7 @@ const Tabs = ({ children }) => {
 
   return (
     <div className="tabs">
+      {/* Tab Header */}
       <ol className="tab-list">
         {children.map((child) => {
           const { label, icon } = child.props;
@@ -52,6 +52,8 @@ const Tabs = ({ children }) => {
           );
         })}
       </ol>
+
+      {/* Tab Content */}
       <div className="tab-content" ref={scrollContainer}>
         {children.map((child) => {
           if (child.props.label !== activeTab) return undefined;

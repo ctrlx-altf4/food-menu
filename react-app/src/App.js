@@ -9,6 +9,7 @@ import { useEffect } from "react";
 function App() {
   const [data, setData] = useState([]);
 
+  //Fetch data from api
   useEffect(() => {
     async function fetchData() {
       const apiURl =
@@ -19,6 +20,7 @@ function App() {
     fetchData();
   }, []);
 
+  //preprocessing the data to have {breakfast:[],lunch:[],dinner:[]} form
   if (!data.length) return <div />;
   const reducedData = data.reduce((obj, d) => {
     if (obj[d.category]) {
@@ -29,10 +31,13 @@ function App() {
   }, {});
   return (
     <div className="container">
+      {/* Title */}
       <div className="title-container">
         <h1 className="title">Foodie</h1>
       </div>
+
       <Tabs>
+        {/* Breakfast tab */}
         <div
           label="Breakfast"
           icon={
@@ -54,6 +59,8 @@ function App() {
             />
           ))}
         </div>
+
+        {/* Lunch Tab */}
         <div
           label="Lunch"
           icon={
@@ -75,6 +82,8 @@ function App() {
             />
           ))}
         </div>
+
+        {/* Dinner Tab */}
         <div
           label="Dinner"
           icon={
