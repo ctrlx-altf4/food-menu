@@ -1,0 +1,211 @@
+$primary-color: #62bac7;
+$bg-color: #fafafa;
+$black-color: rgba(0, 0, 0, 0.87);
+$white-color: rgba(255, 255, 255, 0.87);
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $bg-color;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Roboto", sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  overscroll-behavior-y: none;
+}
+/* Hides scrollbar in Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  padding: 1rem;
+  padding-top: 0;
+}
+.title {
+  &-container {
+    padding: 1rem;
+    padding-top: 2rem;
+    background: $bg-color;
+    z-index: 99;
+    position: relative;
+  }
+  text-align: center;
+
+  color: $primary-color;
+  line-height: 1;
+  font-size: 1.7rem;
+  font-weight: 1000;
+}
+h2 {
+  color: $primary-color;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.tab {
+  &-list {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: $bg-color;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    &-item {
+      list-style: none;
+      border-bottom: 4px solid transparent;
+      padding: 1rem 1.5rem;
+      background: $primary-color;
+      color: $black-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      min-width: 95px;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+      &:hover {
+        filter: brightness(110%);
+        transition: 0.4s all ease;
+      }
+      #icon {
+        background: transparent;
+        color: $white-color;
+      }
+      #label {
+        background: transparent;
+        color: $black-color;
+      }
+    }
+    &-active {
+      border-bottom: 4px solid $black-color;
+      color: $white-color;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  outline: none;
+  margin-bottom: 3%;
+  line-height: 1.4;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+  &:hover {
+    .img {
+      transform: scale(1.3) rotate(3deg);
+    }
+  }
+
+  .img {
+    &-container {
+      position: relative;
+      z-index: 0;
+      height: 200px;
+      overflow: hidden;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s;
+  }
+  .description {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    color: grey;
+    &-footer {
+      margin-top: 1rem;
+      display: flex;
+      align-items: flex-end;
+      align-content: flex-end;
+      span {
+        margin-right: 1.2rem;
+        color: grey;
+        display: flex;
+        align-items: center;
+      }
+      &-icon {
+        margin-right: 0.4rem;
+        color: inherit;
+      }
+    }
+  }
+  .divider {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 0.5rem;
+    height: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .rate {
+    display: flex;
+    flex-direction: column;
+    #label {
+      display: none;
+    }
+    #value {
+      margin-top: 1rem;
+    }
+    padding-bottom: 1rem;
+  }
+  @media (min-width: 640px) {
+    flex-direction: row;
+    max-width: 900px;
+    .img-container {
+      flex-basis: 30%;
+      height: auto;
+    }
+    .description {
+      padding: 1rem;
+      padding-top: 0;
+      margin-top: 0;
+      flex-basis: 55%;
+    }
+    .rate {
+      flex-basis: 15%;
+      align-items: flex-end;
+      #label {
+        display: block;
+      }
+    }
+  }
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #333; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

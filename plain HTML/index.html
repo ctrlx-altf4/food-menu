@@ -1,0 +1,402 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Foodie</title>
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="container">
+      <!-- Header Title -->
+      <header class="title-container">
+        <h1 class="title">Foodie</h1>
+        <span class="moon" title="toggle theme" onClick="toggleTheme()">
+          &#x2739;
+        </span>
+      </header>
+
+      <!-- Actual Tabs Begins -->
+      <div class="tabs">
+        <!-- Tab Lists Header here -->
+        <div class="tab-list">
+          <div
+            class="tab-list-item tab-list-active"
+            onClick="activateTab(event,'breakfast')"
+          >
+            <i class="fa fa-coffee" aria-hidden="true"></i>
+            <span id="label">Breakfast</span>
+          </div>
+
+          <div class="tab-list-item" onClick="activateTab(event,'lunch')">
+            <i class="fa fa-beer" aria-hidden="true"></i>
+            <span id="label">Lunch</span>
+          </div>
+
+          <div class="tab-list-item" onClick="activateTab(event,'dinner')">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <span id="label">Dinner</span>
+          </div>
+        </div>
+
+        <!-- Tab contents here -->
+        <main class="tab-content">
+          <div id="breakfast" class="tab-content-item">
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Breakfast</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Food Menu 1</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Breakfast Menu 2</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+          </div>
+
+          <div id="lunch" class="tab-content-item">
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Lunch</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Food Menu 1</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Food Menu 1</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+          </div>
+
+          <div id="dinner" class="tab-content-item">
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Dinner 1</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Food Menu 1</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+            <!-- Each CArd -->
+            <div class="card">
+              <div class="img-container">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+                  "
+                ></div>
+              </div>
+
+              <div class="description">
+                <h1>Food Menu 1</h1>
+                <hr class="divider" width="40" />
+                <p>
+                  Lorem ipsum o orem Ipsum is simply dummy text of the printing
+                  and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s.
+                </p>
+                <footer class="description-footer">
+                  <span>
+                    <i
+                      class="fa fa-hourglass footer-icon"
+                      aria-hidden="true"
+                    ></i>
+                    15 mins
+                  </span>
+                  <span>
+                    <i class="fa fa-star footer-icon" aria-hidden="true"></i>
+                    2 serves
+                  </span>
+                </footer>
+              </div>
+              <div class="rate">
+                <span id="label">Price</span>
+                <h2 id="value">Rs 250.00</h2>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
